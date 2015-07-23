@@ -1,0 +1,26 @@
+package:
+  name: mpich2
+  version: 1.4.1
+
+source:
+  fn: mpich2-1.4.1.tar.gz
+  url: http://www.mpich.org/static/downloads/1.4.1/mpich2-1.4.1.tar.gz
+
+build:
+  number: 1
+  rpaths:
+    - lib/
+    - lib64/
+  string: esmf
+
+requirements:
+  build:
+    - gcc 4.8.2 esmf
+
+  run:
+    - gcc 4.8.2 esmf
+
+about:
+  home: https://http://www.mpich.org/
+  license: BSD
+  summary: MPICH is a high performance and widely portable implementation of the Message Passing Interface (MPI) standard.

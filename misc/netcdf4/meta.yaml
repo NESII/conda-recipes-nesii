@@ -1,0 +1,30 @@
+package:
+    name: netcdf4
+    version: {{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
+
+source:
+    git_url: https://github.com/Unidata/netcdf4-python.git
+    git_tag: {{environ['CBUILD_NETCDF4_PYTHON_TAG']}}
+
+build:
+    number: 1
+
+requirements:
+    build:
+        - python
+        - setuptools
+        - numpy
+        - libnetcdf =={{environ['CBUILD_NETCDF4_LIBNETCDF_VERSION']}}
+    run:
+        - python
+        - setuptools
+        - numpy
+        - libnetcdf =={{environ['CBUILD_NETCDF4_LIBNETCDF_VERSION']}}
+test:
+  requires:
+    - nose
+
+about:
+    home: http://ncpp.github.io/ocgis/
+    license: NCSA License
+    summary: OCGIS is short for OpenClimateGIS, a set of geoprocessing and calculation tools for CF-compliant climate datasets.

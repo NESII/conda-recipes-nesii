@@ -1,0 +1,34 @@
+package:
+  name: cfunits
+  version: {{environ['CBUILD_CFUNITS_VERSION']}}
+
+source:
+  fn: cfunits-1.0.tar.gz
+  url: https://bitbucket.org/cfpython/cfunits-python/downloads/cfunits-1.0.tar.gz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - udunits
+    - netcdf4
+  run:
+    - python
+    - udunits
+    - netcdf4
+
+test:
+  imports:
+    - cfunits
+
+about:
+  home: https://bitbucket.org/cfpython/cfunits-python
+  license: MIT License
+  summary: A Python interface to UNIDATA's Udunits-2 package with CF extensions.
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

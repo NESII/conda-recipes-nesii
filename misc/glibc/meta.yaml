@@ -1,0 +1,18 @@
+package:
+  name: glibc
+  version: 2.21
+
+source:
+  fn: glibc-2.21.tar.gz
+  url: http://ftp.gnu.org/gnu/glibc/glibc-2.21.tar.gz
+
+build:
+  number: 1
+  rpaths:
+    - lib/
+    - lib64/
+
+about:
+  home: https://www.gnu.org/software/libc/
+  license: GNU Lesser General Public License
+  summary: Any Unix-like operating system needs a C library - the library which defines the system calls and other basic facilities such as open, malloc, printf, exit... The GNU C Library is used as the C library in the GNU systems and most systems with the Linux kernel.

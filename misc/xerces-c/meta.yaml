@@ -1,0 +1,17 @@
+package:
+  name: xerces-c
+  version: 3.1.1
+
+source:
+  fn: xerces-c-3.1.1.tar.gz
+#  url: http://mirrors.ibiblio.org/apache/xerces/c/3/sources/xerces-c-3.1.1.tar.gz
+#  md5: 6a8ec45d83c8cfb1584c5a5345cb51ae
+  url: http://mirror.symnds.com/software/Apache//xerces/c/3/sources/xerces-c-3.1.2.tar.gz
+  md5: 9eb1048939e88d6a7232c67569b23985
+
+#requirements:
+
+about:
+  home: http://xerces.apache.org/xerces-c/
+  license: Apache 2.0
+  summary: Xerces-C++ is a validating XML parser written in a portable subset of C++.

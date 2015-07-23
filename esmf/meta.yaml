@@ -1,0 +1,46 @@
+package:
+  name: esmf
+  version: {{environ['CBUILD_ESMF_VERSION']}}
+
+build: 
+  number: 1
+  rpaths:
+    - lib/
+    - lib64/
+
+source:
+  git_url: git://git.code.sf.net/p/esmf/esmf
+  git_tag: {{environ['CBUILD_ESMF_TAG']}}
+
+requirements:
+  build:
+    - gcc 4.8.2 esmf
+    - gmp
+    - mpc
+    - mpfr
+    - f90netcdf 4.4.1 esmf
+    - libnetcdf 4.3.2 esmf
+    - curl
+    - zlib
+    - openssl
+    - hdf5 1.8.14 esmf
+    - openmpi 1.8.4 esmf # [osx]
+    - mpich2 1.4.1 esmf # [linux]
+  run:
+    - gcc 4.8.2 esmf
+    - gmp
+    - mpc
+    - mpfr
+    - f90netcdf 4.4.1 esmf
+    - libnetcdf 4.3.2 esmf
+    - curl
+    - zlib
+    - openssl
+    - hdf5 1.8.14 esmf
+    - openmpi 1.8.4 esmf # [osx]
+    - mpich2 1.4.1 esmf # [linux]
+
+about:
+  home: http://www.earthsystemmodeling.org/
+  license: The University of Illinois/NCSA Open Source License (NCSA)
+  summary: The Earth System Modeling Framework (ESMF) is software for building and coupling weather, climate, and related models.

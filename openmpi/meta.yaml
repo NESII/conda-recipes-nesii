@@ -1,0 +1,33 @@
+package:
+  name: openmpi
+  version: 1.8.4
+
+source:
+  fn: openmpi-1.8.4.tar.bz2
+  url: https://www.open-mpi.org/software/ompi/v1.8/downloads/openmpi-1.8.4.tar.bz2
+
+build:
+  binary_relocation: true
+  detect_binary_files_with_prefix: true
+  string: esmf
+  number: 1
+  rpaths:
+    - lib/
+    - lib64/
+
+requirements:
+  build:
+    - gcc 4.8.2 esmf
+    - gmp
+    - mpc
+    - mpfr
+  run:
+    - gcc 4.8.2 esmf
+    - gmp
+    - mpc
+    - mpfr
+
+about:
+  home: https://www.open-mpi.org
+  license: BSD
+  summary: The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners.

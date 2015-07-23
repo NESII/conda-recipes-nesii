@@ -1,0 +1,40 @@
+package:
+    name: ocgis-esmf
+    version: {{environ['CBUILD_OCGIS_VERSION']}}
+
+source:
+    git_url: https://github.com/NCPP/ocgis.git
+    git_tag: {{environ['CBUILD_OCGIS_TAG']}}
+
+build:
+    number: 1
+
+requirements:
+    build:
+      - python
+      - setuptools
+      - numpy
+      - netcdf4 <={{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
+      - shapely
+      - fiona
+      - gdal
+    run:
+      - esmpy =={{environ['CBUILD_ESMF_VERSION']}}
+      - python
+      - numpy
+      - netcdf4 <={{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
+      - shapely
+      - fiona
+      - gdal
+      - icclim
+      - cfunits =={{environ['CBUILD_CFUNITS_VERSION']}}
+      - rtree
+      - proj4
+test:
+  requires:
+    - nose
+
+about:
+    home: http://ncpp.github.io/ocgis/
+    license: NCSA License
+    summary: OCGIS is short for OpenClimateGIS, a set of geoprocessing and calculation tools for CF-compliant climate datasets. This installation includes ESMF for regridding operations.

@@ -1,0 +1,29 @@
+package:
+  name: hdf5
+  version: 1.8.14
+
+source:
+  fn: hdf5-1.8.14.tar.gz
+  url: https://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8.14/src/hdf5-1.8.14.tar.gz
+
+build:
+  number: 1
+  string: esmf
+  rpaths:
+    - lib/
+    - lib64/
+
+requirements:
+  build:
+    - gcc 4.8.2 esmf
+    - zlib
+
+  run:
+    - gcc 4.8.2 esmf
+    - zlib
+
+about:
+  home: https://www.hdfgroup.org/HDF5/
+  license: BSD-like
+  summary: HDF5 is a data model, library, and file format for storing and managing data.
+

@@ -1,0 +1,29 @@
+package:
+  name: gcc
+  version: 4.8.2
+
+source:
+  fn: gcc-4.8.2.tar.bz2
+  url: http://mirrors-usa.go-parts.com/gcc/releases/gcc-4.8.2/gcc-4.8.2.tar.bz2
+
+build:
+  number: 1
+  rpaths:
+    - lib/
+    - lib64/
+  string: esmf
+
+requirements:
+  build:
+    - gmp
+    - mpc
+    - mpfr
+  run:
+    - gmp
+    - mpc
+    - mpfr
+
+about:
+  home: https://gcc.gnu.org/
+  license: GNU General Public License version 3
+  summary: The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, Ada, and Go, as well as libraries for these languages (libstdc++, libgcj,...).
