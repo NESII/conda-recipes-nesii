@@ -33,7 +33,7 @@ CONDA_BASE = '~/anaconda'
 #tdk: change back to dev branch for conda-esmf
 GIT_REPOS = {
              # 'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'dev'},
-             'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'build-esmf'},
+             'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'i7-libgdal'},
              'dougal': {'url': 'https://github.com/NESII/conda-recipes-2', 'branch': 'dev'}}
 
 TO_BUILD_OCGIS = OrderedDict()
@@ -62,8 +62,8 @@ TO_BUILD_ESMF['conda-esmf'] = [
     'esmpy',
 ]
 
-# TO_BUILD = TO_BUILD_OCGIS
-TO_BUILD = TO_BUILD_ESMF
+TO_BUILD = TO_BUILD_OCGIS
+# TO_BUILD = TO_BUILD_ESMF
 
 CBUILD_ENV = dict(
     CBUILD_ESMF_TAG='ESMF_6_3_0rp1',
@@ -74,7 +74,7 @@ CBUILD_ENV = dict(
     # CBUILD_ESMF_VERSION='7.0.0bs51',
     # CBUILD_OCGIS_TAG='next',
     # CBUILD_OCGIS_VERSION='1.1.0n',
-    CBUILD_OCGIS_TAG='staged-release-v1.2.0',
+    CBUILD_OCGIS_TAG='v1.2.0',
     CBUILD_OCGIS_VERSION='1.2.0',
     # set to "simple" to run smaller test target. set to "all" to run all tests
     CBUILD_OCGIS_TEST_TARGET='simple',
@@ -86,7 +86,7 @@ CBUILD_ENV = dict(
     # GIT_SSL_NO_VERIFY='true'
 )
 
-BINSTAR_ADD_CHANNELS = 'https://conda.binstar.org/nesii/channel/dev'
+BINSTAR_ADD_CHANNELS = 'https://conda.binstar.org/nesii/channel/ocgis'
 BINSTAR_CHANNEL = 'https://conda.binstar.org/nesii/channel/dev'
 BINSTAR_USER = 'bekozi'
 BINSTAR_ORGANIZATION = 'nesii'

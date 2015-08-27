@@ -7,7 +7,7 @@ source:
     git_tag: {{environ['CBUILD_OCGIS_TAG']}}
 
 build:
-    number: 1
+    number: 2
 
 requirements:
     build:
@@ -17,14 +17,14 @@ requirements:
         - netcdf4 <={{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
         - shapely
         - fiona
-        - gdal
+        - gdal <2.0
     run:
         - python
         - numpy
         - netcdf4 <={{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
         - shapely
         - fiona
-        - gdal
+        - gdal <2.0
         - icclim
         - cfunits =={{environ['CBUILD_CFUNITS_VERSION']}}
         - rtree

@@ -11,3 +11,5 @@ fab set_worker:build \
 fab set_worker:build \
     build:upload=true \
     test_conda_ocgis
+
+fab set_worker:build worker_terminate
