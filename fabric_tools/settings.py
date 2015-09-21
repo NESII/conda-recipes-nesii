@@ -33,7 +33,7 @@ CONDA_BASE = '~/anaconda'
 #tdk: change back to dev branch for conda-esmf
 GIT_REPOS = {
              # 'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'dev'},
-             'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'i7-libgdal'},
+             'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'master'},
              'dougal': {'url': 'https://github.com/NESII/conda-recipes-2', 'branch': 'dev'}}
 
 TO_BUILD_OCGIS = OrderedDict()
@@ -52,26 +52,26 @@ TO_BUILD_OCGIS['conda-esmf'] = [
 
 TO_BUILD_ESMF = OrderedDict()
 TO_BUILD_ESMF['conda-esmf'] = [
-    # 'gcc',
-    # 'hdf5',
-    # 'libnetcdf',
-    # 'f90netcdf',
-    # 'mpich2',
-    # 'mpi4py',
-    # 'esmf',
+    'gcc',
+    'hdf5',
+    'libnetcdf',
+    'f90netcdf',
+    'mpich2',
+    'mpi4py',
+    'esmf',
     'esmpy',
 ]
 
-TO_BUILD = TO_BUILD_OCGIS
-# TO_BUILD = TO_BUILD_ESMF
+# TO_BUILD = TO_BUILD_OCGIS
+TO_BUILD = TO_BUILD_ESMF
 
 CBUILD_ENV = dict(
-    CBUILD_ESMF_TAG='ESMF_6_3_0rp1',
-    CBUILD_ESMF_VERSION='6.3.0rp1',
+    # CBUILD_ESMF_TAG='ESMF_6_3_0rp1',
+    # CBUILD_ESMF_VERSION='6.3.0rp1',
     # CBUILD_ESMF_TAG='HEAD',
     # CBUILD_ESMF_VERSION='HEAD',
-    # CBUILD_ESMF_TAG='ESMF_7_0_0_beta_snapshot_51',
-    # CBUILD_ESMF_VERSION='7.0.0bs51',
+    CBUILD_ESMF_TAG='ESMF_7_0_0_beta_snapshot_55',
+    CBUILD_ESMF_VERSION='7.0.0bs55',
     # CBUILD_OCGIS_TAG='next',
     # CBUILD_OCGIS_VERSION='1.1.0n',
     CBUILD_OCGIS_TAG='v1.2.0',
