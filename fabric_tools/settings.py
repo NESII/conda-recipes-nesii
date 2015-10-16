@@ -52,12 +52,12 @@ TO_BUILD_OCGIS['conda-esmf'] = [
 
 TO_BUILD_ESMF = OrderedDict()
 TO_BUILD_ESMF['conda-esmf'] = [
-    'gcc',
-    'hdf5',
-    'libnetcdf',
-    'f90netcdf',
-    'mpich2',
-    'mpi4py',
+    # 'gcc',
+    # 'hdf5',
+    # 'libnetcdf',
+    # 'f90netcdf',
+    # 'mpich2',
+    # 'mpi4py',
     'esmf',
     'esmpy',
 ]
@@ -70,8 +70,8 @@ CBUILD_ENV = dict(
     # CBUILD_ESMF_VERSION='6.3.0rp1',
     # CBUILD_ESMF_TAG='HEAD',
     # CBUILD_ESMF_VERSION='HEAD',
-    CBUILD_ESMF_TAG='ESMF_7_0_0_beta_snapshot_55',
-    CBUILD_ESMF_VERSION='7.0.0bs55',
+    CBUILD_ESMF_TAG='ESMF_7_0_0_beta_snapshot_57',
+    CBUILD_ESMF_VERSION='7.0.0bs57',
     # CBUILD_OCGIS_TAG='next',
     # CBUILD_OCGIS_VERSION='1.1.0n',
     CBUILD_OCGIS_TAG='v1.2.0',
@@ -86,8 +86,9 @@ CBUILD_ENV = dict(
     # GIT_SSL_NO_VERIFY='true'
 )
 
-BINSTAR_ADD_CHANNELS = 'https://conda.binstar.org/nesii/channel/ocgis'
-BINSTAR_CHANNEL = 'https://conda.binstar.org/nesii/channel/dev'
+BINSTAR_ADD_CHANNELS = ['nesii/channel/esmf', 'nesii/channel/ocgis']
+# BINSTAR_ADD_CHANNELS = 'https://conda.binstar.org/nesii/channel/ocgis'
+BINSTAR_CHANNEL = 'https://anaconda.org/nesii/channel/dev'
 BINSTAR_USER = 'bekozi'
 BINSTAR_ORGANIZATION = 'nesii'
 

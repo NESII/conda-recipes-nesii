@@ -55,7 +55,8 @@ def build(upload='false', channel='dev', upload_only='false', no_test='false', c
         binstar_login()
 
     if add_channels == 'true':
-        env.worker.run('{0} config --add channels {1}'.format(CONDA, BINSTAR_ADD_CHANNELS))
+        for c in BINSTAR_ADD_CHANNELS:
+            env.worker.run('{0} config --add channels {1}'.format(CONDA, c))
     # try:
     with shell_env(**CBUILD_ENV):
         for k, v in TO_BUILD.iteritems():
