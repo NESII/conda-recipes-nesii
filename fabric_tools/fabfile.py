@@ -67,10 +67,9 @@ def build(upload='false', channel='dev', upload_only='false', no_test='false', c
                     try:
                         git_clone(GIT_REPOS[k]['url'])
                     except GitExists:
-                        # tdk: SSL certificate problems?
-                        # pass
                         LOG.info('git repo exists. pulling in {0}'.format(path_git_repo))
                         with env.worker.cd(path_git_repo):
+                            env.worker.run('git checkout master')
                             env.worker.run('git pull')
 
             for package_name in v:
