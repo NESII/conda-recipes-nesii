@@ -10,34 +10,11 @@ from settings import *
 
 
 @task
-def binstar_login():
-    login = env.worker.run('binstar whoami')
+def conda_server_login():
+    login = env.worker.run('conda server whoami')
     if 'Anonymous User' in login:
-        LOG.info('not logged into binstar. logging in.')
-        env.worker.run('binstar login')
-
-
-@task
-def binstar_package():
-    #tdk: doc
-    binstar_login()
-    cmd = 'binstar package --private {0}/'.format(BINSTAR_USER)
-    for pkgs in TO_BUILD.itervalues():
-        for pkg in pkgs:
-            env.worker.run(cmd + pkg)
-
-
-@task
-def binstar_remove(package=None):
-    #tdk: doc
-    binstar_login()
-    cmd = 'yes | binstar remove {0}/'.format(BINSTAR_USER)
-    if package is None:
-        for pkgs in TO_BUILD.itervalues():
-            for pkg in pkgs:
-                env.worker.run(cmd + pkg)
-    else:
-        env.worker.run(cmd + package)
+        LOG.info('not logged into conda server. logging in.')
+        env.worker.run('conda server login')
 
 
 @task
@@ -52,7 +29,7 @@ def build(upload='false', channel='dev', upload_only='false', no_test='false', c
         env.worker.run('{0} clean --lock'.format(CONDA))
 
     if upload == 'true':
-        binstar_login()
+        conda_server_login()
 
     if add_channels == 'true':
         for c in BINSTAR_ADD_CHANNELS:
@@ -91,24 +68,24 @@ def build(upload='false', channel='dev', upload_only='false', no_test='false', c
                         env.worker.run(cmd)
 
                 if upload == 'true':
-                    build_upload(k, package_name, channel=channel, user=BINSTAR_ORGANIZATION)
+                    conda_server_upload(k, package_name, channel=channel, user=BINSTAR_ORGANIZATION)
     # finally:
     #     if add_channels == 'true':
     #         env.worker.run('{0} config -f --remove channels {1}'.format(CONDA, BINSTAR_ADD_CHANNELS))
 
 
 @task
-def build_upload(key, package_name, channel='dev', user=None):
+def conda_server_upload(key, package_name, channel='dev', user=None):
     """
-    Upload packages to binstar.
+    Upload packages to Anaconda server.
 
     :param str channel: The name of the target channel for upload.
     """
     # tdk: doc
     bpath = os.path.join(env.worker.get_git_path(GIT_REPOS[key]['url']), package_name)
     with env.worker.cd(bpath):
-        path = env.worker.run('{0} build --output .'.format(CONDA)).strip()
-        cmd = '{binstar} upload --force -c {channel} {path}'.format(binstar=BINSTAR, channel=channel, path=path)
+        path_cmd = '`{0} build --output .`'.format(CONDA)
+        cmd = 'conda server upload --force -c {channel} {path}'.format(binstar=BINSTAR, channel=channel, path=path_cmd)
         if user is not None:
             cmd += ' -u {0}'.format(user)
         env.worker.run(cmd)
