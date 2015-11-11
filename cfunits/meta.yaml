@@ -3,8 +3,8 @@ package:
   version: {{environ['CBUILD_CFUNITS_VERSION']}}
 
 source:
-  fn: cfunits-1.0.tar.gz
-  url: https://bitbucket.org/cfpython/cfunits-python/downloads/cfunits-1.0.tar.gz
+  git_tag: {{environ['CBUILD_CFUNITS_TAG']}}
+  git_url: https://bitbucket.org/cfpython/cfunits-python.git
 
 build:
   number: 1
