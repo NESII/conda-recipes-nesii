@@ -36,53 +36,50 @@ def build(upload='false', channel='dev', upload_only='false', no_test='false', c
             env.worker.run('{0} config --add channels {1}'.format(CONDA, c))
     # try:
     with shell_env(**CBUILD_ENV):
-        for k, v in TO_BUILD.iteritems():
-            path_git_repo = env.worker.get_git_path(GIT_REPOS[k]['url'])
-            LOG.info('initializing git for {0}. path is {1}.'.format(k, path_git_repo))
+        for package_name in TO_BUILD:
+            path_git_repo = env.worker.get_git_path(GIT_REPO['url'])
+            LOG.info('initializing git repo. path is {}.'.format(path_git_repo))
             with settings(abort_exception=GitExists):
                 with env.worker.cd(env.worker.path_git):
                     try:
-                        git_clone(GIT_REPOS[k]['url'])
+                        git_clone(GIT_REPO['url'])
                     except GitExists:
                         LOG.info('git repo exists. pulling in {0}'.format(path_git_repo))
                         with env.worker.cd(path_git_repo):
                             env.worker.run('git checkout master')
                             env.worker.run('git pull')
 
-            for package_name in v:
-                LOG.info('initializing git for {0}:{1}'.format(k, package_name))
-                bpath = os.path.join(path_git_repo, package_name)
-                LOG.info('path is {0}'.format(bpath))
-                with env.worker.cd(bpath):
-                    branch = GIT_REPOS[k]['branch']
-                    LOG.info('checking out branch {0}'.format(branch))
-                    # tdk: SSL certificate problems?
-                    git_checkout(branch)
+            bpath = os.path.join(path_git_repo)
+            LOG.info('recipe directory path is {0}'.format(bpath))
+            with env.worker.cd(bpath):
+                branch = GIT_REPO['branch']
+                LOG.info('checking out branch {0}'.format(branch))
+                git_checkout(branch)
 
-                    if upload_only == 'false':
-                        if no_test == 'true':
-                            nt = ' --no-test'
-                        else:
-                            nt = ''
-                        cmd = '{0} build{1} .'.format(CONDA, nt)
-                        env.worker.run(cmd)
+                if upload_only == 'false':
+                    if no_test == 'true':
+                        nt = ' --no-test'
+                    else:
+                        nt = ''
+                    cmd = '{0} build{1} {2}'.format(CONDA, nt, package_name)
+                    env.worker.run(cmd)
 
-                if upload == 'true':
-                    conda_server_upload(k, package_name, channel=channel, user=BINSTAR_ORGANIZATION)
+            if upload == 'true':
+                conda_server_upload(package_name, channel=channel, user=BINSTAR_ORGANIZATION)
     # finally:
     #     if add_channels == 'true':
     #         env.worker.run('{0} config -f --remove channels {1}'.format(CONDA, BINSTAR_ADD_CHANNELS))
 
 
 @task
-def conda_server_upload(key, package_name, channel='dev', user=None):
+def conda_server_upload(package_name, channel='dev', user=None):
     """
     Upload packages to Anaconda server.
 
     :param str channel: The name of the target channel for upload.
     """
     # tdk: doc
-    bpath = os.path.join(env.worker.get_git_path(GIT_REPOS[key]['url']), package_name)
+    bpath = os.path.join(env.worker.get_git_path(GIT_REPO['url']), package_name)
     with env.worker.cd(bpath):
         path_cmd = '`{0} build --output .`'.format(CONDA)
         cmd = 'conda server upload --force -c {channel} {path}'.format(binstar=BINSTAR, channel=channel, path=path_cmd)

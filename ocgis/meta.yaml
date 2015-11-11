@@ -7,7 +7,7 @@ source:
     git_tag: {{environ['CBUILD_OCGIS_TAG']}}
 
 build:
-    number: 2
+    number: 1
 
 requirements:
     build:

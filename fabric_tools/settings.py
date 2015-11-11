@@ -30,48 +30,32 @@ CONDA_BASE = '~/anaconda'
 
 # BUILDING #
 
-#tdk: change back to dev branch for conda-esmf
-GIT_REPOS = {
-             # 'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'dev'},
-             'conda-esmf': {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'master'},
-             'dougal': {'url': 'https://github.com/NESII/conda-recipes-2', 'branch': 'dev'}}
+GIT_REPO = {'url': 'https://github.com/NESII/conda-esmf', 'branch': 'master'}
 
-TO_BUILD_OCGIS = OrderedDict()
-# TO_BUILD_OCGIS['dougal'] = [
-#     'libspatialindex',
-#     'rtree'
-# ]
-TO_BUILD_OCGIS['conda-esmf'] = [
+TO_BUILD = [
+    # 'libspatialindex',
+    # 'rtree',
     # 'expat',
     # 'udunits',
     # 'proj4',
     # 'cfunits',
     # 'icclim',
     'ocgis',
-]
-
-TO_BUILD_ESMF = OrderedDict()
-TO_BUILD_ESMF['conda-esmf'] = [
     # 'gcc',
     # 'hdf5',
     # 'libnetcdf',
     # 'f90netcdf',
     # 'mpich2',
     # 'mpi4py',
-    'esmf',
-    'esmpy',
+    # 'esmf',
+    # 'esmpy',
 ]
 
-# TO_BUILD = TO_BUILD_OCGIS
-TO_BUILD = TO_BUILD_ESMF
-
 CBUILD_ENV = dict(
-    # CBUILD_ESMF_TAG='ESMF_6_3_0rp1',
-    # CBUILD_ESMF_VERSION='6.3.0rp1',
-    # CBUILD_ESMF_TAG='HEAD',
-    # CBUILD_ESMF_VERSION='HEAD',
-    CBUILD_ESMF_TAG='master',
-    CBUILD_ESMF_VERSION='master',
+    CBUILD_ESMF_TAG='ESMF_6_3_0rp1',
+    CBUILD_ESMF_VERSION='6.3.0rp1',
+    # CBUILD_ESMF_TAG='master',
+    # CBUILD_ESMF_VERSION='master',
     # CBUILD_OCGIS_TAG='next',
     # CBUILD_OCGIS_VERSION='1.1.0n',
     CBUILD_OCGIS_TAG='v1.2.0',
@@ -80,6 +64,7 @@ CBUILD_ENV = dict(
     CBUILD_OCGIS_TEST_TARGET='simple',
     CBUILD_NETCDF4_PYTHON_VERSION='1.1.7',
     CBUILD_NETCDF4_PYTHON_TAG='v1.1.7rel',
+    CBUILD_CFUNITS_TAG='1.0',
     CBUILD_CFUNITS_VERSION='1.0',
     # osx related build variables
     # DYLD_LIBRARY_PATH='/Users/ben.koziol/anaconda/envs/_test/lib:${DYLD_LIBRARY_PATH}',
