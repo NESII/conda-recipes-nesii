@@ -46,6 +46,7 @@ def build(upload='false', channel='dev', upload_only='false', no_test='false', c
                     except GitExists:
                         LOG.info('git repo exists. pulling in {0}'.format(path_git_repo))
                         with env.worker.cd(path_git_repo):
+                            env.worker.run('git fetch')
                             env.worker.run('git checkout master')
                             env.worker.run('git pull')
 
