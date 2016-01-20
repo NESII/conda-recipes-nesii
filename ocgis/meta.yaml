@@ -14,21 +14,21 @@ requirements:
         - python
         - setuptools
         - numpy
-        - netcdf4 <={{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
+        - netcdf4
         - shapely
         - fiona
-        - gdal <2.0
+        - gdal <2
+        - proj.4
     run:
         - python
         - numpy
-        - netcdf4 <={{environ['CBUILD_NETCDF4_PYTHON_VERSION']}}
+        - netcdf4
         - shapely
         - fiona
-        - gdal <2.0
-        - icclim
-        - cfunits =={{environ['CBUILD_CFUNITS_VERSION']}}
+        - gdal <2
+        - cf_units
         - rtree
-        - proj4
+        - proj.4
 
 test:
   requires:

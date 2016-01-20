@@ -1,9 +1,9 @@
 package:
-  name: f90netcdf
+  name: netcdf-fortran
   version: 4.4.1
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/
     - lib64/
@@ -15,17 +15,9 @@ source:
 
 requirements:
   build:
-    - gcc 4.8.2 esmf
-    - gmp
-    - mpc
-    - mpfr
-    - libnetcdf 4.3.2 esmf
+    - libnetcdf
   run:
-    - gcc 4.8.2 esmf
-    - gmp
-    - mpc
-    - mpfr
-    - libnetcdf 4.3.2 esmf
+    - libnetcdf
 
 about:
   home: http://www.unidata.ucar.edu/software/netcdf/docs/netcdf-fortran-install.html

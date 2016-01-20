@@ -17,20 +17,12 @@ requirements:
   build:
     - python
     - openmpi 1.8.4 esmf #[osx]
-    - mpich2 1.4.1 esmf #[linux]
-    - gcc 4.8.2 esmf
-    - gmp
-    - mpc
-    - mpfr
+    - mpich2 #[linux]
 
   run:
     - python
     - openmpi 1.8.4 esmf #[osx]
-    - mpich2 1.4.1 esmf #[linux]
-    - gcc 4.8.2 esmf
-    - gmp
-    - mpc
-    - mpfr
+    - mpich2 #[linux]
 
 about:
   home: http://mpi4py.scipy.org/
