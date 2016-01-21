@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 
+anaconda login
 conda config --add channels ioos
 cd /conda-esmf
 conda build ocgis
