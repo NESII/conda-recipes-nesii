@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-export CBUILD_ESMF_VERSION=7.0.0
+export CBUILD_ESMF_VERSION=7.0.0.dev1
 export CBUILD_ESMF_TAG=ESMF_7_0_0
 
 git clone -b next https://github.com/NESII/conda-esmf
