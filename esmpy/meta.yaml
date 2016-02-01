@@ -3,8 +3,7 @@ package:
   version: {{environ['CBUILD_ESMF_VERSION']}}
 
 build:
-  number: 0
-  string: esmf
+  number: 1
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf

@@ -2,12 +2,11 @@ package:
   name: esmf
   version: {{environ['CBUILD_ESMF_VERSION']}}
 
-build: 
-  number: 0
+build:
+  number: 1
   rpaths:
     - lib/
     - lib64/
-  string: esmf
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf

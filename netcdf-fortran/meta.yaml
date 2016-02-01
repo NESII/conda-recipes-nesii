@@ -3,11 +3,10 @@ package:
   version: 4.4.1
 
 build:
-  number: 0
+  string: 1
   rpaths:
     - lib/
     - lib64/
-  string: esmf
 
 source:
   fn: netcdf-fortran-4.4.1.tar.gz
