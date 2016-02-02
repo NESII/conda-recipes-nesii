@@ -1,16 +1,16 @@
 package:
   name: esmf
-  version: {{environ['CBUILD_ESMF_VERSION']}}
+  version: 7.0.0
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/
     - lib64/
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
-  git_tag: {{environ['CBUILD_ESMF_TAG']}}
+  git_tag: ESMF_7_0_0
 
 requirements:
   build:
