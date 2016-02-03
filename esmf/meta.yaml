@@ -3,7 +3,7 @@ package:
   version: 7.0.0
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/
     - lib64/
