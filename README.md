@@ -1,5 +1,3 @@
-# conda-esmf
+[![Build Status](https://travis-ci.org/NESII/conda-esmf.svg?branch=master)](https://travis-ci.org/NESII/conda-esmf)
 
-![Travis CI](https://travis-ci.org/NESII/conda-esmf.svg?branch=master)
-
-Anaconda build recipes for the Earth System Modeling Framework (ESMF) and OpenClimateGIS (OCGIS).
+Anaconda build recipes for the Earth System Modeling Framework (ESMF).
