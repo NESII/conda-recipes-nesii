@@ -20,5 +20,5 @@ fi
 
 make  -j ${CPU_COUNT}
 #make all_tests | tee ~/esmf_all_tests.out
-make check
+#make check
 make install

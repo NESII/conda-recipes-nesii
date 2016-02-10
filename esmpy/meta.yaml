@@ -1,24 +1,24 @@
 package:
   name: esmpy
-  version: 7.0.0
+  version: HEAD
 
 build:
   number: 2
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
-  git_tag: ESMF_7_0_0
+  git_tag: master
 
 requirements:
   build:
     - python
     - numpy
-    - esmf ==7.0.0
+    - esmf ==HEAD
     - mpi4py
   run:
     - python
     - numpy
-    - esmf ==7.0.0
+    - esmf ==HEAD
     - mpi4py
 
 test:
