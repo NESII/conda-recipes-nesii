@@ -3,6 +3,12 @@
 
 DIMAGE=bekozi/nbuild-centos6
 
+## UPDATE DOCKER IMAGE ##
+#conda update --all
+#yum -y update && yum clean all
+#docker commit -m "Updated libraries" ekozi/nbuild-centos6 bekozi/nbuild-centos6
+#docker push bekozi/nbuild-centos6
+
 ########################################################################################################################
 ## BUILD DOCKER IMAGE ##
 
