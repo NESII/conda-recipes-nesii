@@ -14,7 +14,8 @@ RUN yum -y install wget \
                    patch \
                    expat-devel \
                    libtool \
-                   texinfo
+                   texinfo \
+                   unzip
 RUN yum clean all
 
 RUN wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
