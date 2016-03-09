@@ -3,7 +3,7 @@ package:
   version: HEAD
 
 build:
-  number: 2
+  number: 3
   rpaths:
     - lib/
     - lib64/
@@ -21,6 +21,7 @@ requirements:
     - netcdf-fortran
 #    - openmpi # [osx]
     - mpich2 # [linux]
+    - krb5
 
 about:
   home: http://www.earthsystemmodeling.org/
