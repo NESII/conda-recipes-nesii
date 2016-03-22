@@ -6,7 +6,7 @@
 #    export LD_LIBRARY_PATH=${PREFIX}/lib:${PREFIX}/lib64
 #fi
 
-export ESMFMKFILE=`find ${PREFIX} -name '*esmf.mk'`
+export ESMFMKFILE=${PREFIX}/lib/esmf.mk
 ESMPY_SRC=`find . -name '*ESMPy*'`
 cd ${ESMPY_SRC}
 ${PYTHON} setup.py build --ESMFMKFILE=${ESMFMKFILE}
