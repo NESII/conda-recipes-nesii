@@ -3,7 +3,7 @@ package:
   version: HEAD
 
 build:
-  number: 5
+  number: 6
   rpaths:
     - lib/
     - lib64/
