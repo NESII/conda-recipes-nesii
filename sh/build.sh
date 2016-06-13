@@ -16,6 +16,5 @@ DIMAGE=bekozi/nbuild-centos6
 #docker build -t ${dimage} --file ${file} .
 
 ########################################################################################################################
-## BUILD/UPLOAD ESMPy ##
 docker pull ${DIMAGE}
 docker run --cpuset-cpus=3 -it -v ~/l/project/conda-esmf:/conda-esmf ${DIMAGE} bash
