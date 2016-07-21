@@ -8,3 +8,5 @@ conda build -c nesii esmf
 
 #anaconda login
 #anaconda upload -u nesii `conda build --output ocgis`
+anaconda upload -u nesii `conda build --output gdal`
+anaconda upload -u nesii `conda build --output fiona`
