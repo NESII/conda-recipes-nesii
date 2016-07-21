@@ -8,7 +8,7 @@ source:
     md5: 91e245fcc323ff4568aa819e82b4784b
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
@@ -19,6 +19,7 @@ requirements:
         - proj.4
         - curl
         - libnetcdf
+        - shapely # Force usage of appropriate GEOS.
     run:
         - python
         - setuptools
@@ -27,6 +28,7 @@ requirements:
         - proj.4
         - curl
         - libnetcdf
+        - shapely # Force usage of appropriate GEOS.
 
 test:
     files:

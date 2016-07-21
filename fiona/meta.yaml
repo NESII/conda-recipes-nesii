@@ -8,7 +8,7 @@ source:
     md5: f6b70e1a30fc8db597c360e375d186de
 
 build:
-    number: 0
+    number: 1
     preserve_egg_dir: True
     entry_points:
         - fio=fiona.fio.main:main_group

@@ -3,7 +3,7 @@ package:
   version: 4.4.1
 
 build:
-  string: 1
+  string: 2
   rpaths:
     - lib/
     - lib64/
