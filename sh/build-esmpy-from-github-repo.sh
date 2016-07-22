@@ -7,6 +7,7 @@ BRANCH="build-head"
 # Conda environment to install into.
 ENV_NAME="esmpy"
 
+conda install --yes conda-build
 cd ${WD}
 git clone -b ${BRANCH} https://github.com/NESII/conda-recipes-nesii.git
 cd conda-recipes-nesii
