@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# Temporary working directory for recipe directory.
 WD=$(mktemp -d)
+# The branch containing the recipe for a HEAD build.
 BRANCH=build-head
+# Conda environment to install into.
 ENV_NAME=esmpy
 
 cd ${WD}
