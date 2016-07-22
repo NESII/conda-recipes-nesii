@@ -24,6 +24,8 @@ requirements:
 test:
   requires:
     - nose
+  imports:
+    - ESMF
 
 about:
   home: https://www.earthsystemcog.org/projects/esmpy/
