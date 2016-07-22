@@ -3,7 +3,7 @@ package:
   version: HEAD
 
 build:
-  number: 6
+  number: 7
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
@@ -24,6 +24,8 @@ requirements:
 test:
   requires:
     - nose
+  imports:
+    - ESMF
 
 about:
   home: https://www.earthsystemcog.org/projects/esmpy/
