@@ -15,4 +15,9 @@ file=./Dockerfile-Ubuntu-Tester
 docker build --pull --no-cache -t ${name} --file ${file} .
 docker push ${name}
 
+name=bekozi/nbuild-ubuntu
+file=./Dockerfile-Ubuntu-Builder
+docker build --pull --no-cache -t ${name} --file ${file} .
+docker push ${name}
+
 popd
