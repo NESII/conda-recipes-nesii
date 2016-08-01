@@ -11,6 +11,7 @@ conda install --yes conda-build
 cd ${WD}
 git clone -b ${BRANCH} https://github.com/NESII/conda-recipes-nesii.git
 cd conda-recipes-nesii
+conda build libnetcdf
 conda build netcdf-fortran
 conda build esmpy
 conda create --yes -n ${ENV_NAME} --use-local esmpy==HEAD
