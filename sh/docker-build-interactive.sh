@@ -17,4 +17,4 @@ DIMAGE=bekozi/nbuild-centos6
 
 ########################################################################################################################
 docker pull ${DIMAGE}
-docker run --cpuset-cpus=3 -it -v ~/l/project/conda-esmf:/conda-esmf ${DIMAGE} bash
+docker run --cpuset-cpus=3 -it -v ~/l/project:/project ${DIMAGE} bash
