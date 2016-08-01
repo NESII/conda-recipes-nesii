@@ -1,0 +1,24 @@
+package:
+  name: hdf5
+  version: 1.8.17
+
+source:
+  fn: hdf5-1.8.17.tar.gz
+  url: http://www.hdfgroup.org/ftp/HDF5/current/src/hdf5-1.8.17.tar.gz
+  md5: 7d572f8f3b798a628b8245af0391a0ca
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - zlib
+
+  run:
+    - zlib
+
+about:
+  home: https://www.hdfgroup.org/HDF5/
+  license: BSD-like
+  summary: HDF5 is a data model, library, and file format for storing and managing data.
+

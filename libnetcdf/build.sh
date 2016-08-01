@@ -13,5 +13,3 @@ export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
     --prefix=$PREFIX
 make
 make install
-
-rm -rf $PREFIX/share
