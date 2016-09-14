@@ -10,7 +10,7 @@ build:
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
-  git_tag: ESMF_7_0_
+  git_tag: ESMF_7_0_0
 
 requirements:
   build:
