@@ -7,7 +7,7 @@ source:
     git_tag: next
 
 build:
-    number: 0
+    number: 1
     skip: True # [osx]
     skip: True # [win]
     skip: True # [py3k]
@@ -15,16 +15,20 @@ build:
 requirements:
     build:
         - python >=2.7,<3
-        - fiona ==1.6.3
+        - fiona >1.6.3
+        - gdal >2
+        - libgdal >2
         - netcdf4
         - numpy
         - shapely
         - rtree
         - cf_units
-        - icclim ==4.1.1
+        - icclim ==4.2.5
     run:
         - python
-        - fiona ==1.6.3
+        - fiona >1.6.3
+        - gdal >2
+        - libgdal >2
         - netcdf4
         - numpy
         - shapely
@@ -32,7 +36,7 @@ requirements:
         - rtree
         - cf_units
         - krb5
-        - icclim ==4.1.1
+        - icclim ==4.2.5
 #        - esmpy==7.0.0  #Optional!
 
 test:
