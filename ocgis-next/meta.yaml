@@ -17,7 +17,7 @@ requirements:
         - python >=2.7,<3
         - fiona
         - gdal
-        - libgdal
+#        - libgdal
         - netcdf4
         - numpy
         - shapely
@@ -28,7 +28,7 @@ requirements:
         - python
         - fiona
         - gdal
-        - libgdal
+#        - libgdal
         - netcdf4
         - numpy
         - shapely
