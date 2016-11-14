@@ -15,4 +15,4 @@ conda build -c nesii ocgis-next
 anaconda login
 #anaconda upload -u nesii -c ocgis `conda build --output gdal fiona ocgis udunits2 munch rtree libspatialindex click-plugins cf_units`
 #anaconda upload -u nesii -c ocgis -c main `conda build --output ocgis`
-anaconda upload -u nesii -c ocgis -c main `conda build --output ocgis-next`
+anaconda upload -u nesii -c ocgis-next -c main `conda build --output ocgis-next`
