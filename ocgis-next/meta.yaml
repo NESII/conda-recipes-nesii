@@ -7,7 +7,7 @@ source:
     git_tag: next
 
 build:
-    number: 6
+    number: 7
     skip: True # [osx]
     skip: True # [win]
     skip: True # [py3k]
@@ -32,7 +32,7 @@ requirements:
         - netcdf4
         - numpy
         - shapely
-        - proj.4
+        - proj4
         - rtree
         - cf_units
         - krb5

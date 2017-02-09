@@ -9,7 +9,7 @@ docker run -it -v ~/l/project:/project ${image} bash
 
 cd /project/conda-esmf
 #conda build -c nesii ocgis
-conda build -c nesii ocgis-next
+conda build -c nesii/label/ocgis-next ocgis-next
 #conda build proj.4
 
 anaconda login
