@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 
-#docker login
+docker login
 
-pushd ~/l/project/conda-esmf
+cd ..
 
 name=bekozi/nbuild-centos6
 file=./Dockerfile-CentOS6-Builder
@@ -19,5 +19,3 @@ name=bekozi/nbuild-ubuntu
 file=./Dockerfile-Ubuntu-Builder
 docker build --pull --no-cache -t ${name} --file ${file} .
 docker push ${name}
-
-popd
