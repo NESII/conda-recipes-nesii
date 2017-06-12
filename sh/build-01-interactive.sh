@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 
-DIMAGE=bekozi/nbuild-centos6
+export DIMAGE=condaforge/linux-anvil
+#export DIMAGE=bekozi/nbuild-centos6
+export HOST_PROJECT=/home/ubuntu/project
+#export HOST_PROJECT=~/l/project
 
 ########################################################################################################################
 ## BUILD DOCKER IMAGE ##
@@ -11,4 +14,4 @@ DIMAGE=bekozi/nbuild-centos6
 
 ########################################################################################################################
 docker pull ${DIMAGE}
-docker run --cpuset-cpus=4 -it -v ~/l/project:/project ${DIMAGE} bash
+docker run --cpuset-cpus=4 -it -v ${HOST_PROJECT}:/project ${DIMAGE} bash

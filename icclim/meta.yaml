@@ -3,11 +3,12 @@ package:
     version: 4.2.5
 
 source:
+#    git_url: https://github.com/NESII/icclim.git
     git_url: https://github.com/cerfacs-globc/icclim
     git_tag: 4.2.5
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:

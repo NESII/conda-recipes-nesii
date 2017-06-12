@@ -1,27 +1,33 @@
 package:
   name: esmf
-  version: 7.0.0
+#  version: 7.1.0.bs.27
+  version: 7.1.0.bs.27
 
 build:
-  number: 3
+  number: 1
   rpaths:
     - lib/
     - lib64/
 
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
-  git_tag: ESMF_7_0_0
+#  git_tag: ESMF_7_0_0
+  git_tag: ESMF_7_1_0_beta_snapshot_27
 
 requirements:
   build:
     - netcdf-fortran
+    - mpich
+    - gcc
 #    - openmpi # [osx]
-    - mpich2 # [linux]
+#    - mpich2 # [linux]
   run:
     - netcdf-fortran
+    - mpich
+    - libgcc
 #    - openmpi # [osx]
-    - mpich2 # [linux]
-    - krb5
+#    - mpich2 # [linux]
+#    - krb5
 
 test:
   commands:
@@ -31,4 +37,5 @@ test:
 about:
   home: http://www.earthsystemmodeling.org/
   license: The University of Illinois/NCSA Open Source License (NCSA)
+  license_file: LICENSE
   summary: The Earth System Modeling Framework (ESMF) is software for building and coupling weather, climate, and related models.
