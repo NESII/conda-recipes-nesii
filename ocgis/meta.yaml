@@ -1,6 +1,8 @@
 package:
-    name: ocgis
-    version: 2.0.0
+#    name: ocgis
+    name: ocgis-next
+#    version: 2.0.0
+    version: 2.0.1.dev1
 
 source:
     git_url: https://github.com/NCPP/ocgis.git

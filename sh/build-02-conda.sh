@@ -2,22 +2,23 @@
 
 LOGDIR=/project/conda-recipes-nesii/logs
 
-ESMPY_PYVER=(3.5)
-#ESMPY_PYVER=(2.7 3.5 3.6)
+#ESMPY_PYVER=(3.5)
+ESMPY_PYVER=(2.7 3.5 3.6)
 OCGIS_PYVER=(2.7 3.5 3.6)
-ICCLIM_PYVER=(2.7)
+#ICCLIM_PYVER=(2.7)
 
 ESMF_LABEL="-l dev-esmf"
 #ESMF_LABEL="-l main"
 
 #OCGIS_LABEL="-l dev-ocgis"
-OCGIS_LABEL="-l main -l ocgis"
+#OCGIS_LABEL="-l main -l ocgis"
+OCGIS_LABEL="-l main -l ocgis-next"
 
-#FORCE="false"
-FORCE="true"
+FORCE="false"
+#FORCE="true"
 
-#UPLOAD="true"
-UPLOAD="false"
+UPLOAD="true"
+#UPLOAD="false"
 
 BUILD="true"
 #BUILD="false"
@@ -39,15 +40,18 @@ else
     FORCE_FLAG=""
 fi
 
+# Set conda-forge channel package priority.
+conda config --prepend channels "conda-forge"
+
 ########################################################################################################################
 # Build ESMF
 
-#if [ ${BUILD} == "true" ]; then
-#    conda build -c conda-forge esmf
-#fi
-#if [ ${UPLOAD} == "true" ]; then
-#    anaconda upload -u nesii ${FORCE_FLAG} ${ESMF_LABEL} `conda build --output esmf`
-#fi
+if [ ${BUILD} == "true" ]; then
+    conda build -c conda-forge esmf
+fi
+if [ ${UPLOAD} == "true" ]; then
+    anaconda upload -u nesii ${FORCE_FLAG} ${ESMF_LABEL} `conda build --output esmf`
+fi
 
 for ii in ${ESMPY_PYVER[*]}; do
     if [ ${BUILD} == "true" ]; then
