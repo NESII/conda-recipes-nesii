@@ -1,0 +1,12 @@
+FROM opensuse
+
+LABEL maintainer=ben.koziol@noaa.gov
+
+#RUN zypper refresh
+RUN zypper install wget
+
+RUN wget https://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
+RUN bash miniconda.sh -b -p /opt/conda && rm miniconda.sh
+RUN /opt/conda/bin/conda update --yes --all
+RUN /opt/conda/bin/conda install --yes conda-build \
+                                       anaconda-client
