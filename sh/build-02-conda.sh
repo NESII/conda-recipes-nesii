@@ -7,7 +7,7 @@ ESMPY_PYVER=(2.7 3.5 3.6)
 OCGIS_PYVER=(2.7 3.5 3.6)
 #ICCLIM_PYVER=(2.7)
 
-ESMF_LABEL="-l dev-esmf"
+#ESMF_LABEL="-l dev-esmf"
 #ESMF_LABEL="-l main"
 
 #OCGIS_LABEL="-l dev-ocgis"

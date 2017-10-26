@@ -1,6 +1,6 @@
 package:
   name: esmpy
-  version: 7.1.0.dev32
+  version: 7.1.0.dev35
 #  version: latest
 
 build:
@@ -9,7 +9,7 @@ build:
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
 #  git_tag: ESMF_7_0_0
-  git_tag: ESMF_7_1_0_beta_snapshot_32
+  git_tag: ESMF_7_1_0_beta_snapshot_35
 #  git_tag: master
 #  path: /project/esmf
 
@@ -18,15 +18,15 @@ requirements:
     - python
     - numpy
 #    - esmf ==7.0.0
-#    - esmf ==7.1.0.dev31
-    - esmf ==7.1.0.dev32
+    - esmf ==7.1.0.dev35
+#    - esmf ==latest
 #    - mpi4py
   run:
     - python
     - numpy
 #    - esmf ==7.0.0
-#    - esmf ==7.1.0.bs.27
-    - esmf ==7.1.0.dev32
+    - esmf ==7.1.0.dev35
+#    - esmf ==latest
 #    - mpi4py
 
 test:

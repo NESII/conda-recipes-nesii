@@ -2,21 +2,21 @@ package:
 #    name: ocgis
     name: ocgis-next
 #    version: 2.0.0
-    version: 2.0.1.dev1
+    version: 2.1.0.dev1
 
 source:
     git_url: https://github.com/NCPP/ocgis.git
     git_tag: master
 
 build:
-    number: 1
+    number: 2
 
 requirements:
     build:
         - python
         - six
         - numpy
-        - gdal
+        - gdal 2.1*
         - shapely
         - netcdf4
         - fiona
@@ -25,7 +25,7 @@ requirements:
         - python
         - six
         - numpy
-        - gdal
+        - gdal 2.1*
         - shapely
         - netcdf4
         - fiona
@@ -39,6 +39,7 @@ requirements:
 test:
   requires:
     - nose
+    - mock
 
 about:
     home: http://ncpp.github.io/ocgis/
