@@ -1,20 +1,24 @@
 package:
   name: libnetcdf
-  version: 4.4.1
+  version: 4.5.0
 
 source:
-  fn: v4.4.1.tar.gz
-  url: https://github.com/Unidata/netcdf-c/archive/v4.4.1.tar.gz
+  git_url: https://github.com/Unidata/netcdf-c.git
+  git_tag: v4.5.0
 
 requirements:
   build:
     - curl
     - hdf5
     - zlib
+    - m4
+    - gcc
   run:
     - curl
     - hdf5
     - zlib
+    - m4
+    - libgcc
 
 test:
   commands:

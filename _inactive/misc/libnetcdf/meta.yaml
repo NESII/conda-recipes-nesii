@@ -11,7 +11,7 @@ build:
 
 source:
   fn: v4.3.2.tar.gz
-  url: https://github.com/Unidata/netcdf-c/archive/v4.3.2.tar.gz
+  url: https://github.com/Unidata/libnetcdf/archive/v4.3.2.tar.gz
 
 requirements:
   build:

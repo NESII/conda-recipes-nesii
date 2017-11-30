@@ -1,14 +1,14 @@
 package:
     name: gdal
-    version: 1.11.3
+    version: 2.1.4
 
 source:
-    fn: gdal-1.11.3.tar.gz
-    url: http://download.osgeo.org/gdal/1.11.3/gdal-1.11.3.tar.gz
-    md5: 91e245fcc323ff4568aa819e82b4784b
+    fn: gdal-2.1.4.tar.gz
+    url: http://download.osgeo.org/gdal/2.1.4/gdal-2.1.4.tar.gz
+    md5: ae3726c6deb81c01603b3e5680f239d8
 
 build:
-    number: 2
+    number: 1
 
 requirements:
     build:
@@ -16,19 +16,19 @@ requirements:
         - setuptools
         - numpy
         - geos
-        - proj.4
+        - proj4
         - curl
-        - libnetcdf
         - shapely # Force usage of appropriate GEOS.
+        - gcc
     run:
         - python
         - setuptools
         - numpy
         - geos
-        - proj.4
+        - proj4
         - curl
-        - libnetcdf
         - shapely # Force usage of appropriate GEOS.
+        - libgcc
 
 test:
     files:

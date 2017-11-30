@@ -1,11 +1,10 @@
 package:
     name: fiona
-    version: 1.6.3
+    version: 1.7.10.post1
 
 source:
-    fn: Fiona-1.6.3.tar.gz
-    url: https://pypi.python.org/packages/source/F/Fiona/Fiona-1.6.3.tar.gz
-    md5: f6b70e1a30fc8db597c360e375d186de
+    git_url: https://github.com/Toblerity/Fiona.git
+    git_tag: 1.7.10.post1
 
 build:
     number: 1
@@ -18,10 +17,11 @@ requirements:
         - python
         - cython
         - setuptools
-        - gdal ==1.11.3
+        - gdal
         - numpy
         - munch
         - click-plugins
+        - enum34
     run:
         - python
         - setuptools
@@ -29,8 +29,9 @@ requirements:
         - munch
         - click-plugins
         - six
-        - gdal ==1.11.3
+        - gdal
         - numpy
+        - enum34
 
 test:
     imports:
