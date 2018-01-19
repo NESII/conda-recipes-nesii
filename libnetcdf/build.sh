@@ -17,9 +17,9 @@ export CC=mpicc
 #    --disable-shared
 
 ./configure \
-    --disable-shared \
     --enable-parallel-tests \
     --prefix=${PREFIX}
+#    --disable-shared
 
 #./configure --prefix=${PREFIX}
 

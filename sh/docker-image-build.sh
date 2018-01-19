@@ -10,8 +10,8 @@ cd ..
 #docker build --pull --no-cache -t ${name} --file ${file} .
 #docker push ${name}
 
-name=bekozi/ntest-ubuntu
-file=./Dockerfile-Ubuntu-Tester
+name=bekozi/ubuntu
+file=./Dockerfile-Ubuntu
 docker build --pull --no-cache -t ${name} --file ${file} .
 #docker push ${name}
 

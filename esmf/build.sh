@@ -18,7 +18,7 @@ export ESMF_CXXLINKLIBS=-lmpifort
 #    export ESMF_COMM=mpiuni
 #    export ESMF_COMM=openmpi
 #else
-export ESMF_COMM=mpich2
+export ESMF_COMM=mpich3
 #fi
 
 make  -j ${CPU_COUNT}

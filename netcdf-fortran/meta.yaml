@@ -1,6 +1,6 @@
 package:
   name: netcdf-fortran
-  version: 4.4.3
+  version: 4.4.4
 
 build:
   number: 1
@@ -9,8 +9,8 @@ build:
     - lib64/
 
 source:
-  fn: netcdf-fortran-4.4.3.tar.gz
-  url: ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-fortran-4.4.3.tar.gz
+  fn: netcdf-fortran-4.4.4.tar.gz
+  url: ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-fortran-4.4.4.tar.gz
 
 requirements:
   build:

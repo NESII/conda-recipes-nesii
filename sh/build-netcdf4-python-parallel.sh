@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+_BUILD="conda build -c conda-forge"
+
+source activate ocgis
+
 cd ..
-conda build hdf5 && \
-conda build netcdf-c && \
-conda build mpi4py && \
-conda build netcdf4-python
+${_BUILD} hdf5 && \
+${_BUILD} libnetcdf && \
+${_BUILD} mpi4py && \
+${_BUILD} netcdf4
