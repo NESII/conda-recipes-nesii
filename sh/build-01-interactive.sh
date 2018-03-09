@@ -3,9 +3,9 @@
 
 export DIMAGE=condaforge/linux-anvil
 #export DIMAGE=bekozi/nbuild-centos6
-export HOST_PROJECT=/home/ubuntu/project
-#export HOST_PROJECT=~/l/project
-export DPROC=4
+#export HOST_PROJECT=/home/ubuntu/project
+export HOST_PROJECT=~/l/project
+export DPROC=3
 
 ########################################################################################################################
 ## BUILD DOCKER IMAGE ##

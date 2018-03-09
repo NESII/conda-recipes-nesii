@@ -1,7 +1,7 @@
 package:
   name: esmf
-#  version: 7.1.0.dev41
-  version: latest
+  version: 7.1.0r
+#  version: latest
 
 build:
   number: 1
@@ -12,8 +12,8 @@ build:
 source:
   git_url: git://git.code.sf.net/p/esmf/esmf
 #  git_tag: ESMF_7_0_0
-#  git_tag: ESMF_7_1_0_beta_snapshot_41
-  git_tag: master
+  git_tag: ESMF_7_1_0r
+#  git_tag: master
 #  path: /project/esmf
 
 requirements:

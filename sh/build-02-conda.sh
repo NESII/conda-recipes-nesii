@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 
-LOGDIR=/project/conda-recipes-nesii/logs
+LOGDIR=/opt
 
 #ESMPY_PYVER=(3.5)
 ESMPY_PYVER=(2.7 3.5 3.6)
 OCGIS_PYVER=(2.7 3.5 3.6)
-#ICCLIM_PYVER=(2.7)
+ICCLIM_PYVER=(2.7 3.5 3.6)
 
 ESMF_LABEL="-l dev-esmf"
 #ESMF_LABEL="-l main"
 
-#OCGIS_LABEL="-l dev-ocgis"
+OCGIS_LABEL="-l dev-ocgis"
 #OCGIS_LABEL="-l main -l ocgis"
-OCGIS_LABEL="-l main -l ocgis-next"
+#OCGIS_LABEL="-l main -l ocgis-next"
 
 FORCE="false"
 #FORCE="true"
 
-UPLOAD="true"
-#UPLOAD="false"
+#UPLOAD="true"
+UPLOAD="false"
 
 BUILD="true"
 #BUILD="false"
@@ -79,10 +79,10 @@ done
 
 #for ii in ${ICCLIM_PYVER[*]}; do
 #    if [ ${BUILD} == "true" ]; then
-#        conda build -c conda-forge --python ${ii} icclim
+#        conda build -c conda-forge --python ${ii} icclim || exit 1
 #    fi
 #    if [ ${UPLOAD} == "true" ]; then
-#        anaconda upload -u nesii ${FORCE_FLAG} ${OCGIS_LABEL} `conda build --output --python ${ii} icclim`
+#        anaconda upload -u nesii ${FORCE_FLAG} ${OCGIS_LABEL} `conda build --output --python ${ii} icclim` || exit 1
 #    fi
 #done
 
