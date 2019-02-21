@@ -18,7 +18,7 @@ requirements:
         - proj4
         - curl
         - shapely # Force usage of appropriate GEOS.
-        - gcc
+#        - gcc
     run:
         - python
         - setuptools
@@ -27,7 +27,7 @@ requirements:
         - proj4
         - curl
         - shapely # Force usage of appropriate GEOS.
-        - libgcc
+#        - libgcc
 
 test:
     files:

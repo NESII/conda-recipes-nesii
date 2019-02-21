@@ -13,13 +13,13 @@ build:
 requirements:
   build:
     - zlib
-    - mpich
-    - gcc
+#    - mpich
+#    - gcc
 
   run:
     - zlib
-    - mpich
-    - libgcc
+#    - mpich
+#    - libgcc
 
 about:
   home: https://www.hdfgroup.org/HDF5/
