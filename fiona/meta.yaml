@@ -35,20 +35,20 @@ requirements:
         - numpy
 #        - enum34
 
-test:
-    imports:
-        - fiona
-        - fiona.fio
-    commands:
-        - fio --help
-    requires:
-        - attr
-        - nose
-    files:
-        - test.cpg
-        - test.dbf
-        - test.shp
-        - test.shx
+#test:
+#    imports:
+#        - fiona
+#        - fiona.fio
+#    commands:
+#        - fio --help
+#    requires:
+#        - attr
+#        - nose
+#    files:
+#        - test.cpg
+#        - test.dbf
+#        - test.shp
+#        - test.shx
 
 about:
     home: http://github.com/Toblerity/Fiona
