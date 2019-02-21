@@ -1,10 +1,10 @@
 package:
   name: mpi4py
-  version: 3.0.0
+  version: 3.0.1
 
 source:
   git_url: https://bitbucket.org/mpi4py/mpi4py.git
-  git_tag: 3.0.0
+  git_tag: 3.0.1
 
 build:
   number: 1
@@ -14,13 +14,13 @@ requirements:
     - python
     - setuptools
     - cython
-    - mpich
+#    - mpich
 #    - openmpi
   run:
     - python
     - setuptools
     - cython
-    - mpich
+#    - mpich
 #    - openmpi
 
 about:
