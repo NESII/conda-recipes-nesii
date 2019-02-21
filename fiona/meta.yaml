@@ -23,7 +23,7 @@ requirements:
         - numpy
         - munch
         - click-plugins
-        - enum34
+#        - enum34
     run:
         - python
         - setuptools
@@ -33,7 +33,7 @@ requirements:
         - six
         - gdal
         - numpy
-        - enum34
+#        - enum34
 
 test:
     imports:
