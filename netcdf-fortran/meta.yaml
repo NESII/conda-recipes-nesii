@@ -15,7 +15,7 @@ source:
 requirements:
   build:
     - libnetcdf
-    - gcc
+#    - gcc
   run:
     - libnetcdf
 
