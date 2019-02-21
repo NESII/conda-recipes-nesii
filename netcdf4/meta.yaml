@@ -22,10 +22,12 @@ requirements:
     - cython
 #    - gcc
     - mpi4py
+    - cftime
   run:
     - python
     - mpi4py
     - libnetcdf
     - numpy
     - cython
+    - cftime
 #    - libgcc
