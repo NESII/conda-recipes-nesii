@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-_BUILD="conda build -c conda-forge"
+_CONDA_ROOT=~/l/anaconda/bin/
+_CONDA="${_CONDA_ROOT}/conda"
+_BUILD="${_CONDA} build -c conda-forge"
 
 source activate ocgis
 
