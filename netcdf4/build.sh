@@ -8,7 +8,7 @@ export HDF5_DIR=${PREFIX}
 #export NETCDF4_INCDIR=${PREFIX}/include
 #export NETCDF4_LIBDIR=${PREFIX}/lib
 #
-#export MPI_INCDIR=${PREFIX}/include
+export MPI_INCDIR=/usr/include/mpich
 #
 #export USE_NCCONFIG=1
 
