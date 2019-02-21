@@ -11,14 +11,14 @@ requirements:
     - curl
     - hdf5
     - zlib
-    - m4
-    - gcc
+#    - m4
+#    - gcc
   run:
     - curl
     - hdf5
     - zlib
-    - m4
-    - libgcc
+#    - m4
+#    - libgcc
 
 test:
   commands:
